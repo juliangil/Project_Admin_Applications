@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Main Page {% endblock %}
+
+{% block encabezado %}
+	Main Page
+{% endblock %}
+ 
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-1">
+				<a href="{% url 'newDevice' %}" class='btn btn-primary'>New Device</a> 
+			</div>
+
+			<div class="col-md-1">
+				<a href="{% url 'newApplication' %}" class='btn btn-primary'>New Application</a> 
+			</div>
+
+			<div class="col-md-8">
+				<h5>
+				<span class="label label-primary">Usuario Registrado:</span>
+				<span class="label label-default">{{ user.username }}</span>
+				<br><br>
+		    	<span class="label label-primary">Email:</span>
+		    	<span class="label label-default">{{ user.email }}</span>
+		    	<br><br>
+		    	<span class="label label-primary">Nombres:</span>
+		    	<span class="label label-default">{{ user.first_name }}</span>
+		    	<br><br>
+		    	<span class="label label-primary">Apellidos:</span>
+		    	<span class="label label-default">{{ user.last_name }}</span>
+		    	<br><br><br>
+		    	<span class="label label-primary">
+		    			{{ user.date_joined }}
+		     			{{ user.last_login }}
+		    	</span><br>
+		    	</h5>
+			</div>
+		</div>
+	</div>
+ 
+{% endblock %}
+
+	
