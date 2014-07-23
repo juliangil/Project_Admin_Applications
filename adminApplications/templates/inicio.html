@@ -11,15 +11,17 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-1">
-				<a href="{% url 'newDevice' %}" class='btn btn-primary'>New Device</a> 
+			<div class="col-md-4" align='right'>
+				<nav>
+					<ul class="pager">
+						<li><a href="{% url 'inicio' %}" >Inicio</a> </li>
+						<li><a href="{% url 'newDevice' %}" >New Device</a></li>
+						<li><a href="{% url 'newApplication' %}" >New Application</a></li>
+					</ul>
+				</nav>						 
 			</div>
 
-			<div class="col-md-1">
-				<a href="{% url 'newApplication' %}" class='btn btn-primary'>New Application</a> 
-			</div>
-
-			<div class="col-md-7">
+			<div class="col-md-8">
 				<a href="{% url 'logout' %}" class='btn btn-danger'>Logout</a> 
 			</div>
 
