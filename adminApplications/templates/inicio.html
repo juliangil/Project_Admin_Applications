@@ -19,7 +19,12 @@
 				<a href="{% url 'newApplication' %}" class='btn btn-primary'>New Application</a> 
 			</div>
 
+			<div class="col-md-7">
+				<a href="{% url 'logout' %}" class='btn btn-danger'>Logout</a> 
+			</div>
+
 			<div class="col-md-8">
+				<br><br><br>
 				<h5>
 				<span class="label label-primary">Usuario Registrado:</span>
 				<span class="label label-default">{{ user.username }}</span>

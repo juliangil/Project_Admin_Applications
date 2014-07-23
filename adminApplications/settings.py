@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'adminApplications.wsgi.application'
 
 
 #CONFUGURACION CON POSTGRESQL
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -83,8 +83,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
 
+'''
 #CONFIGURACION CON SQLITE
 DATABASES = {
     'default': {
@@ -92,6 +92,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+'''
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/

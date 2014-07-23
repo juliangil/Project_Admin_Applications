@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.auth.views import login
+from django.contrib.auth.views import login, logout
 admin.autodiscover()
 
 urlpatterns = [
@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^principal/','adminApplications.views.principal', name='principal'),
     url(r'^nuevoUsuario/', 'adminApplications.views.nuevoUsuario', name='nuevoUsuario'),
     url(r'^login/', login, {'template_name': 'login.html', }, name="login"),
+    url(r'^logout/', logout, {'template_name': 'principal.html', }, name="logout"),
     url(r'^inicio/', 'adminApplications.views.inicio', name='inicio'),
     url(r'^newDevice/', 'adminApplications.views.newDevice', name='newDevice'),
     url(r'^newApplication/', 'adminApplications.views.newApplication', name='newApplication'),
