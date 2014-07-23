@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} Main Page {% endblock %}
+
+{% block encabezado %}
+	Main Page
+{% endblock %}
+ 
+{% block content %}
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-4" align='right'>
+				<nav>
+					<ul class="pager">
+						<li><a href="{% url 'inicio' %}" >Inicio</a> </li>
+						<li><a href="{% url 'newDevice' %}" >New Device</a></li>
+						<li><a href="{% url 'newApplication' %}" >New Application</a></li>
+					</ul>
+				</nav>						 
+			</div>
+
+			<div class="col-md-8">
+				<a href="{% url 'logout' %}" class='btn btn-danger'>Logout</a> 
+			</div>
+
+			<div class="col-md-8">
+				<br><br><br>
+				<h5>
+				<span class="label label-primary">Usuario Registrado:</span>
+				<span class="label label-default">{{ user.username }}</span>
+				<br><br>
+		    	<span class="label label-primary">Email:</span>
+		    	<span class="label label-default">{{ user.email }}</span>
+		    	<br><br>
+		    	<span class="label label-primary">Nombres:</span>
+		    	<span class="label label-default">{{ user.first_name }}</span>
+		    	<br><br>
+		    	<span class="label label-primary">Apellidos:</span>
+		    	<span class="label label-default">{{ user.last_name }}</span>
+		    	<br><br><br>
+		    	<span class="label label-primary">
+		    			{{ user.date_joined }}
+		     			{{ user.last_login }}
+		    	</span><br>
+		    	</h5>
+			</div>
+		</div>
+	</div>
+ 
+{% endblock %}
+
+	
